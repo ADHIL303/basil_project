@@ -1,4 +1,7 @@
-emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+// ✅ Correct initialization
+(function () {
+    emailjs.init("RkR6zcwhSwusqmgKG"); // 🔴 replace this
+})(); // Replace with your EmailJS public key
 
 let step = 0;
 let data = {};
@@ -33,29 +36,27 @@ function nextStep() {
     step++;
     document.getElementById("input").value = "";
 }
-
 function selectService(service) {
     data.service = service;
 
-    // Send email with collected data to info.typingcenter4123@gmail.com
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-        to_email: "info.typingcenter4123@gmail.com",
+    emailjs.send("service_gql9a0m", "template_5ywrkpd", {
+        to_email: "adhilek1@gmail.com",
         from_name: data.name,
         phone: data.phone,
         email: data.email,
         service: data.service,
-        message: `New service inquiry from ${data.name}. Phone: ${data.phone}, Email: ${data.email}, Service: ${data.service}. We will call you soon!`
+        message: `New service inquiry from ${data.name}. Phone: ${data.phone}, Email: ${data.email}, Service: ${data.service}.`
     })
-    .then(() => {
-        setQ("✅ Thank you! We will contact you soon at " + data.phone + ". Have a great day!");
+    .then(function () {
+        setQ("✅ Thank you! We will contact you soon at " + data.phone);
         hideServices();
         document.getElementById("input-section").style.display = "none";
     })
-    .catch(() => {
-        setQ("❌ Sorry, there was an error. Please try again or contact us directly.");
+    .catch(function (error) {
+        console.error(error);
+        setQ("❌ Error sending message.");
     });
 }
-
 function showServices() {
     document.getElementById("input-section").style.display = "none";
     document.getElementById("services-section").style.display = "block";

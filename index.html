@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <title>Amal Alhayat Typing</title>
 <link rel="stylesheet" href="css/style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +24,6 @@
       <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
       <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
       <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-      <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
       <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
   </div>
@@ -334,12 +335,41 @@
   </div>
 </div>
 
+<!-- Chat Toggle Button -->
+<button class="chat-toggle" onclick="toggleChat()">
+  <img src="images/chatbot.png" alt="Chat Bot">
+
+</button>
+
 <!-- Chatbot -->
-<div class="chatbox">
-  <p id="question">What is your name?</p>
-  <input id="input" class="form-control">
-  <button onclick="nextStep()" class="btn mt-2">Send</button>
+<div class="chatbox" id="chatbox">
+  <div id="chat-messages">
+    <p id="question">👋 Hi! I'm here to help you with our services. What's your name?</p>
+  </div>
+  <div id="input-section">
+    <input id="input" class="form-control" placeholder="Type your answer...">
+    <button onclick="nextStep()" class="btn mt-2">Send</button>
+  </div>
+  <div id="services-section" style="display: none;">
+    <p>Choose a service:</p>
+    <div class="service-buttons">
+      <button class="service-btn" onclick="selectService('Family Visa Typing')">Family Visa Typing</button>
+      <button class="service-btn" onclick="selectService('Company Visa Typing')">Company Visa Typing</button>
+      <button class="service-btn" onclick="selectService('Tasheel Services')">Tasheel Services</button>
+      <button class="service-btn" onclick="selectService('Emirates ID Typing')">Emirates ID Typing</button>
+      <button class="service-btn" onclick="selectService('Medical Typing')">Medical Typing</button>
+      <button class="service-btn" onclick="selectService('Certificate Attestation')">Certificate Attestation</button>
+      <button class="service-btn" onclick="selectService('Clearance Certificate')">Clearance Certificate</button>
+      <button class="service-btn" onclick="selectService('Partner Visa Services')">Partner Visa Services</button>
+      <button class="service-btn" onclick="selectService('Local Sponsorship')">Local Sponsorship</button>
+      <button class="service-btn" onclick="selectService('Letter Typing')">Letter Typing</button>
+      <button class="service-btn" onclick="selectService('Translation Services')">Translation Services</button>
+      <button class="service-btn" onclick="selectService('Photocopy / Email')">Photocopy / Email</button>
+      <button class="service-btn" onclick="selectService('Fiari Services')">Fiari Services</button>
+    </div>
+  </div>
 </div>
+
 
 <footer class="bg-dark text-white text-center py-4 mt-5">
   <div class="container">

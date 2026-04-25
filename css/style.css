@@ -10,7 +10,8 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #a6bed7;
+    font-size: 16px;
 }
 
 .navbar {
@@ -20,7 +21,7 @@ body {
 }
 
 .navbar a {
-    color: #e60f00 !important;
+    color: #d01111 !important;
     font-weight: 500;
     text-decoration: none;
     margin: 0 1rem;
@@ -28,13 +29,15 @@ body {
 }
 
 .navbar a:hover {
-    color: #c0392b !important;
+    color: #9e3216 !important;
 }
 
 .hero {
-    background: linear-gradient(135deg, rgba(231, 76, 60, 0.75) 0%, rgba(192, 57, 43, 0.75) 50%), url('../images/indexdp.jpg') center/cover no-repeat;
-    height: 10vh;
-    color: white;
+    background: linear-gradient(135deg, rgba(193, 62, 10, 0.75) 0%, rgba(211, 78, 6, 0.75) 10%), url('../images/indexdp.jpg') center/cover no-repeat;
+    height: 50vh;
+    min-height: 300px;
+    max-height: 600px;
+    color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,16 +65,18 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
     font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     font-weight: 300;
     margin-bottom: 2rem;
+    color: black;
+    
 }
 
 .container {
@@ -81,7 +86,7 @@ body {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 600;
     color: #e74c3c;
     text-align: center;
@@ -89,7 +94,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: clamp(1.3rem, 3vw, 2rem);
     font-weight: 500;
     color: #e74c3c;
     text-align: center;
@@ -118,7 +123,7 @@ h3 {
 }
 
 .card h4, .card h5 {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 600;
     color: #e74c3c;
     margin: 1rem 0;
@@ -149,7 +154,7 @@ h3 {
     right: 20px;
     width: 60px;
     height: 60px;
-    background: #e74c3c;
+    background: #a44040;
     border-radius: 50%;
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -199,21 +204,9 @@ h3 {
     background: #c0392b;
 }
 
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .chatbox {
-        width: 280px;
-        right: 10px;
-        bottom: 10px;
-    }
-}
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
 
 .service-buttons {
     display: flex;
@@ -247,6 +240,442 @@ h3 {
 .contact-strip a {
     color: #ffffff;
     text-decoration: underline;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Extra Small Devices (phones) */
+@media (max-width: 575px) {
+    /* Base typography - increased for better readability */
+    body {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.75rem !important;
+        margin: 2rem 0 1rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem !important;
+        margin: 1.5rem 0 1rem;
+    }
+    
+    h4, h5 {
+        font-size: 1.25rem !important;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    /* Hero section */
+    .hero {
+        height: 50vh !important;
+        min-height: 250px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero p {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Navbar */
+    .navbar {
+        padding: 0.75rem 0.5rem !important;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem !important;
+    }
+    
+    .navbar-brand img {
+        height: 35px !important;
+    }
+    
+    .nav-link {
+        font-size: 1rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
+    
+    /* Cards */
+    .card {
+        padding: 1.25rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    .card img {
+        height: 180px !important;
+    }
+    
+    /* Service cards */
+    .service-card-3d {
+        padding: 2rem !important;
+    }
+    
+    .service-card-3d .service-icon {
+        font-size: 3rem !important;
+    }
+    
+    .service-card-3d h3 {
+        font-size: 1.4rem !important;
+    }
+    
+    .service-card-3d p {
+        font-size: 1rem;
+    }
+    
+    /* About section */
+    .about-card-3d {
+        padding: 1.5rem !important;
+    }
+    
+    .about-card-3d h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .about-card-3d .lead {
+        font-size: 1.1rem;
+    }
+    
+    .about-card-3d p {
+        font-size: 1rem;
+    }
+    
+    .value-box {
+        padding: 1rem !important;
+    }
+    
+    .value-box .value-icon {
+        font-size: 1.75rem !important;
+    }
+    
+    .value-box h5 {
+        font-size: 1rem !important;
+    }
+    
+    .value-box p {
+        font-size: 0.85rem;
+    }
+    
+    /* Location card */
+    .location-card-3d {
+        padding: 2rem !important;
+    }
+    
+    .location-card-3d h3 {
+        font-size: 1.4rem !important;
+    }
+    
+    .location-card-3d p {
+        font-size: 1rem;
+    }
+    
+    /* Contact form */
+    .col-md-4, .col-md-6, .col-lg-6, .col-lg-8, .col-lg-10 {
+        margin-bottom: 1rem;
+    }
+    
+    .card.p-4, .card.p-3 {
+        padding: 1.25rem !important;
+    }
+    
+    .form-control, .form-select {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+    
+    .form-label {
+        font-size: 1rem;
+    }
+    
+    /* Chatbot */
+    .chatbox {
+        width: 92% !important;
+        right: 4% !important;
+        bottom: 80px !important;
+        padding: 1.25rem !important;
+        font-size: 1rem;
+    }
+    
+    .chat-toggle {
+        width: 55px !important;
+        height: 55px !important;
+        bottom: 15px !important;
+        right: 15px !important;
+    }
+    
+    .service-buttons {
+        flex-direction: column;
+    }
+    
+    .service-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+    
+    /* Contact strip */
+    .contact-strip {
+        padding: 1.25rem 0;
+    }
+    
+    .contact-strip h4 {
+        font-size: 1.25rem;
+    }
+    
+    .contact-strip p {
+        font-size: 1rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 2rem 0 !important;
+    }
+    
+    footer p {
+        font-size: 1rem;
+    }
+    
+    /* Service detail cards */
+    .service-detail-card {
+        padding: 1.5rem !important;
+    }
+    
+    .service-detail-card .card-icon {
+        font-size: 2.5rem !important;
+    }
+    
+    .service-detail-card h4 {
+        font-size: 1.2rem !important;
+    }
+    
+    .service-desc {
+        font-size: 0.95rem !important;
+    }
+    
+    .service-features li {
+        font-size: 0.85rem !important;
+    }
+    
+    /* Category banners */
+    .hero-banner {
+        min-height: 180px !important;
+    }
+    
+    .hero-banner img {
+        height: 180px !important;
+    }
+    
+    .hero-banner-overlay h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-banner-overlay p {
+        font-size: 1rem !important;
+    }
+    
+    .category-banner {
+        min-height: 140px !important;
+        margin: 1.5rem 0 !important;
+    }
+    
+    .category-banner img {
+        height: 140px !important;
+    }
+    
+    .category-banner-overlay h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .category-banner-overlay p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .btn-sm {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Small Devices (landscape phones) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    
+    h1 { font-size: 2.2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.5rem !important; }
+    
+    .hero { height: 45vh !important; min-height: 280px; }
+    .hero h1 { font-size: 2.2rem !important; }
+    .hero p { font-size: 1.15rem !important; }
+    
+    .card { padding: 1.25rem !important; }
+    .card img { height: 180px !important; }
+    
+    .chatbox {
+        width: 340px !important;
+        right: 10px !important;
+    }
+    
+    .service-card-3d { padding: 2rem !important; }
+    .service-card-3d .service-icon { font-size: 3.5rem !important; }
+    .service-card-3d h3 { font-size: 1.5rem !important; }
+    .service-card-3d p { font-size: 1rem; }
+    
+    .about-card-3d { padding: 1.75rem !important; }
+    .about-card-3d p { font-size: 1rem; }
+    .value-box { padding: 1.25rem !important; }
+    .value-box h5 { font-size: 1.1rem !important; }
+    
+    .location-card-3d { padding: 2rem !important; }
+    .location-card-3d h3 { font-size: 1.5rem !important; }
+    
+    .hero-banner { min-height: 200px !important; }
+    .hero-banner img { height: 200px !important; }
+    .hero-banner-overlay h2 { font-size: 1.6rem !important; }
+    
+    .category-banner { min-height: 160px !important; }
+    .category-banner img { height: 160px !important; }
+    
+    .service-detail-card { padding: 1.75rem !important; }
+    .service-detail-card .card-icon { font-size: 2.75rem !important; }
+    .service-detail-card h4 { font-size: 1.3rem !important; }
+    .service-desc { font-size: 1rem !important; }
+}
+
+/* Medium Devices (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 16px;
+    }
+    
+    h1 { font-size: 2.8rem !important; }
+    h2 { font-size: 2rem !important; }
+    h3 { font-size: 1.7rem !important; }
+    
+    .hero { height: 50vh !important; min-height: 320px; }
+    .hero h1 { font-size: 2.8rem !important; }
+    .hero p { font-size: 1.25rem !important; }
+    
+    .card { padding: 1.5rem !important; }
+    .card img { height: 200px !important; }
+    
+    .service-card-3d { padding: 2.25rem !important; }
+    .service-card-3d .service-icon { font-size: 4rem !important; }
+    .service-card-3d h3 { font-size: 1.6rem !important; }
+    .service-card-3d p { font-size: 1.05rem; }
+    
+    .about-card-3d { padding: 2rem !important; }
+    .about-card-3d p { font-size: 1.05rem; }
+    .value-box { padding: 1.5rem !important; }
+    .value-box h5 { font-size: 1.15rem !important; }
+    
+    .location-card-3d { padding: 2.25rem !important; }
+    .location-card-3d h3 { font-size: 1.6rem !important; }
+    
+    .hero-banner { min-height: 220px !important; }
+    .hero-banner img { height: 220px !important; }
+    .hero-banner-overlay h2 { font-size: 1.8rem !important; }
+    
+    .category-banner { min-height: 180px !important; }
+    .category-banner img { height: 180px !important; }
+    
+    .service-detail-card { padding: 2rem !important; }
+    .service-detail-card .card-icon { font-size: 3rem !important; }
+    .service-detail-card h4 { font-size: 1.4rem !important; }
+    .service-desc { font-size: 1.05rem !important; }
+    
+    .chatbox {
+        width: 340px !important;
+    }
+}
+
+/* Large Devices (desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero h1 {
+        font-size: 3rem !important;
+    }
+    
+    h2 { font-size: 2rem !important; }
+    h3 { font-size: 1.6rem !important; }
+}
+
+/* Extra Large Devices (large desktops) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .card:hover {
+        transform: none;
+    }
+    
+    .service-card-3d:hover {
+        transform: none;
+    }
+    
+    .about-card-3d:hover {
+        transform: none;
+    }
+    
+    .service-detail-card:hover {
+        transform: none;
+    }
+    
+    .value-box:hover {
+        transform: none;
+    }
+    
+    .location-card-3d:hover {
+        transform: none;
+    }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
 .contact-strip a:hover {
